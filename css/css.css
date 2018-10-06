@@ -3,11 +3,14 @@ body {
  	background-color: #333;
  	color: #fff;
 }
+.row{
+	margin-bottom: 20px;
+}
 .thumbnail{
 	padding:unset;
-	background-color: #333;
-	border-radius: 2%;
-	border: 1px solid #333;
+	margin-bottom: 0;
+	border:none;
+	background:transparent;
 }
 a.thumbnail:hover {
     border-color: #333;
@@ -21,21 +24,33 @@ a.thumbnail:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.centeredCol {
+.centeredCol{
     position: relative;
     text-align: center;
     color: white;
 }
-.centeredCol:hover > a.thumbnail{
+.imgContainer{
+	text-align: center;
+	position: relative;
+	transition: all 0.2s;
+	overflow: hidden;
+	z-index: 1;
+	border-radius: 2%;
+	border: 1px solid #333;
+}
+.imgContainer:hover > .thumbnail > .img-responsive{
+	transform: scale(1.1);
+}
+.imgContainer:hover{
 	border-color: #fff;
 }
-.centeredCol:hover > .centered > a.noLinkLook{
+.imgContainer:hover > .centered > a.noLinkLook{
 	text-shadow: white 0px 0px 10px;
 }
-.centeredCol
 .h1{
 	margin-top: 0;
 	margin-bottom: 0;
+	font-size: 4vw;
 }
 .noLinkLook{
 	color: #fff;
