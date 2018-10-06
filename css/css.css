@@ -17,6 +17,7 @@ a.thumbnail:hover {
  }
 .img-responsive{
 	border-radius:2%;
+	transition: transform .3s;
 }
 .centered {
     position: absolute;
@@ -32,7 +33,6 @@ a.thumbnail:hover {
 .imgContainer{
 	text-align: center;
 	position: relative;
-	transition: all 0.2s;
 	overflow: hidden;
 	z-index: 1;
 	border-radius: 2%;
@@ -44,9 +44,9 @@ a.thumbnail:hover {
 .imgContainer:hover{
 	border-color: #fff;
 }
-.imgContainer:hover > .centered > a.noLinkLook{
+/*.imgContainer:hover > .centered > a.noLinkLook{
 	text-shadow: white 0px 0px 10px;
-}
+}*/
 .h1{
 	margin-top: 0;
 	margin-bottom: 0;
@@ -58,4 +58,10 @@ a.thumbnail:hover {
 .noLinkLook:hover{
 	color: #fff;
 	text-decoration: none;
+}
+.smokes{
+	stroke:#fff;
+	stroke-width:.7;
+	opacity:.8;
+	fill:#fff;
 }
