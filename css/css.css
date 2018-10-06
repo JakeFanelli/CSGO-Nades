@@ -61,7 +61,10 @@ a.thumbnail:hover {
 }
 .smokes{
 	stroke:#fff;
-	stroke-width:.7;
-	opacity:.8;
+	stroke-width:1.1;
+	opacity:.4;
 	fill:#fff;
+}
+.smokes:hover{
+	opacity: 1;
 }
