@@ -68,3 +68,12 @@ a.thumbnail:hover {
 .smokes:hover{
 	opacity: 1;
 }
+.modal-content{
+	background-color:#333;
+}
+.close{
+	color:inherit;
+}
+.close:hover{
+	color:inherit;
+}

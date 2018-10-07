@@ -15,17 +15,45 @@
 	<script>
 		navBar();
 	</script>
-	
+		<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Modal Header</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="embed-responsive embed-responsive-16by9">
+            		<video controls width="100%" height="100%" loop autoplay>
+  						<source src="http://giant.gfycat.com/ThirstyUntidyCottonmouth.webm" type="video/webm" />
+  						Your browser does not support the video tag.
+					</video>
+            	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<div class="container">
 	    <div class="row">
 	        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		        	<svg class="svgClass" viewBox="0 0 150 120">
 		        		<image href="../../media/mirageMap.png" width="150" height="120"></image>
-		        		<g class="smokes">
-		        			<line x1="123" x2="64" y1="66" y2="55"></line>
-		        			<circle cx="123" cy="66" r="1"></circle>
-		        			<circle cx="64" cy="55" r="1"></circle>
-		        		</g>
+		        		<a href="" data-toggle="modal" data-target="#myModal">
+			        		<g class="smokes">
+			        			<line x1="123" x2="64" y1="66" y2="55"></line>
+			        			<circle cx="123" cy="66" r="1"></circle>
+			        			<circle cx="65" cy="55" r="1"></circle>
+			        			<circle cx="63" cy="55" r="1"></circle>
+			        			<circle cx="64" cy="54" r="1"></circle>
+			        			<circle cx="64" cy="56" r="1"></circle>
+			        		</g>
+		        		</a>
 		        	</svg>
 	        </div>
 	    </div>
