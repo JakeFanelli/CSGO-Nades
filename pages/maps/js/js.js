@@ -12,6 +12,6 @@ function genModal(title, video){
 	var video = document.getElementById('videoTag');
 	$('.modal-title').html(title);
 	video.setAttribute("src",body1);
-	video.setAttribute("src",body2);
+	video.setAttribute("src",body3);
 	video.load();
 }
