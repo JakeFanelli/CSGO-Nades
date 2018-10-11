@@ -5,13 +5,11 @@ function genModal(title, video){
 	var title = title;
 	var body = video;
 	console.log(video);
-	var body1 = body.concat(".webm");
-	var body3 = body.concat(".mp4");
-	console.log(body1);
-	console.log(body3);
+	var bodyWebm = body.concat(".webm");
+	var bodyMp4 = body.concat(".mp4");
 	var video = document.getElementById('videoTag');
 	$('.modal-title').html(title);
-	video.setAttribute("src",body1);
-	video.setAttribute("src",body3);
+	video.setAttribute("src",bodyWebm);
+	video.setAttribute("src",bodyMp4);
 	video.load();
 }
