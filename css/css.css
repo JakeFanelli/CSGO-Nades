@@ -12,10 +12,6 @@ body {
 a.thumbnail:hover {
     border-color: #333;
  }
-.imgPic{
-	border-radius:2%;
-	transition: transform .3s;
-}
 .centered {
     position: absolute;
     top: 50%;
@@ -36,7 +32,7 @@ a.thumbnail:hover {
 	border-radius: 2%;
 	border: 1px solid #333;
 }
-.imgContainer:hover > .thumbnail > .img-responsive{
+.imgContainer:hover > .thumbnail > .mapPic{
 	transform: scale(1.1);
 }
 .imgContainer:hover{
