@@ -78,9 +78,7 @@ a.thumbnail:hover {
 	top: 0;
 	left: 0;
 	z-index: -1;
-	padding-left: 15px;
-	padding-right: 15px;
 }
-.svgClass{
+svgClass{
 	z-index: 1;
 }
