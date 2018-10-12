@@ -12,7 +12,7 @@ body {
 a.thumbnail:hover {
     border-color: #333;
  }
-.img-responsive{
+.imgPic{
 	border-radius:2%;
 	transition: transform .3s;
 }
