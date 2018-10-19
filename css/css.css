@@ -58,6 +58,15 @@ a.thumbnail:hover {
 .smokes:hover{
 	opacity: 1;
 }
+.flashes{
+	stroke:#fff;
+	stroke-width:1.1;
+	opacity:.4;
+	fill:#fff;
+}
+.flashes:hover{
+	opacity: 1;
+}
 .modal-content{
 	background-color:#333;
 }
