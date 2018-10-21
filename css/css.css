@@ -89,3 +89,34 @@ a.thumbnail:hover {
 .svgClass{
 	z-index: 1;
 }
+.btn{
+	background-color: #222;
+	color: #9d9d9d;
+}
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn:hover{
+	color:#fff;
+	background-color: #000;
+}
+.btn.active.focus{
+	outline:none;
+	color: #9d9d9d;
+}
+.btn:focus{
+	outline:none;
+	color: #9d9d9d;
+}
+.btn:focus:hover{
+	color:#fff;
+}
+.btn.active:hover, .btn.focus:hover, .btn.active.focus:hover{
+	color:#fff;
+}
+#filter:hover{
+	color: #9d9d9d;
+	background-color: #222;
+	cursor: default;
+}
