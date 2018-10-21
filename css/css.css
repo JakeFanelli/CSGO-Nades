@@ -96,16 +96,14 @@ a.thumbnail:hover {
 .btn:focus, .btn:active {
   outline: none !important;
   box-shadow: none !important;
+  background-color: #222;
+  color: #9d9d9d;
 }
 .btn:hover{
 	color:#fff;
 	background-color: #000;
 }
 .btn.active.focus{
-	outline:none;
-	color: #9d9d9d;
-}
-.btn:focus{
 	outline:none;
 	color: #9d9d9d;
 }
@@ -127,4 +125,9 @@ a.thumbnail:hover {
 #donate:active, #donate:focus{
 	background-color:#000;
 	color:#fff;
+}
+.btn{
+	text-shadow: none;
+	box-shadow: none;
+	border:none;
 }
