@@ -120,3 +120,11 @@ a.thumbnail:hover {
 	background-color: #222;
 	cursor: default;
 }
+#donate{
+	border:none;
+	box-shadow: none;
+}
+#donate:active, #donate:focus{
+	background-color:#000;
+	color:#fff;
+}

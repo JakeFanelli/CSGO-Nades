@@ -1,6 +1,9 @@
 function navBar(){
   	$("#nav-bar").load("navbar.html");
 }
+function filterBar(){
+	$("#filterRow").load("filterbar.html");
+}
 function genModal(title, video){
 	var title = title;
 	var body = video;
