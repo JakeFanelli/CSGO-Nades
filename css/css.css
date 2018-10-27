@@ -67,6 +67,15 @@ a.thumbnail:hover {
 .flashes:hover{
 	opacity: 1;
 }
+.molotovs{
+	stroke:#fff;
+	stroke-width:1.1;
+	opacity:.4;
+	fill:#fff;
+}
+.molotovs:hover{
+	opacity: 1;
+}
 .modal-content{
 	background-color:#333;
 }
