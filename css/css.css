@@ -110,7 +110,7 @@ a.thumbnail:hover {
 }
 .btn:hover{
 	color:#fff;
-	background-color: #000;
+	background-color: #000 !important;
 }
 .btn.active.focus{
 	outline:none;
