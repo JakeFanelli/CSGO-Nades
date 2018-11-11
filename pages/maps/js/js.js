@@ -30,9 +30,7 @@ function smokeClick(){
 		if(flashClicked == false){
 			$('.flashes').hide();
 		}
-		console.log("hi");
 		if(molotovClicked == false){
-		console.log("hey");
 			$('.molotovs').hide();
 		}
 	}else{//if clicked already
