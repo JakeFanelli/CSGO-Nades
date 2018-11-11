@@ -98,33 +98,9 @@ a.thumbnail:hover {
 .svgClass{
 	z-index: 1;
 }
-.btn{
-	background-color: #222;
-	color: #9d9d9d;
-}
-.btn:focus, .btn:active {
-  outline: none !important;
-  box-shadow: none !important;
-  background-color: #222;
-  color: #9d9d9d;
-}
-.btn:hover{
-	color:#fff;
-	background-color: #000 !important;
-}
-.btn.active.focus{
-	outline:none;
-	color: #9d9d9d;
-}
-.btn:focus:hover{
-	color:#fff;
-}
-.btn.active:hover, .btn.focus:hover, .btn.active.focus:hover{
-	color:#fff;
-}
 #filter:hover{
 	color: #9d9d9d;
-	background-color: #222;
+	background-color: #222 !important;
 	cursor: default;
 }
 #donate{
@@ -135,14 +111,21 @@ a.thumbnail:hover {
 	background-color:#000;
 	color:#fff;
 }
-.btn{
-	text-shadow: none;
-	box-shadow: none;
-	border:none;
-}
 .filterItem{
 	font-size: 16px;
 }
 .icon-bar{
 	background-color:#9d9d9d !important;
 }
+.btn{
+	background-color: #222;
+	color: #9d9d9d;
+}
+.btn:focus,.btn:active {
+	outline: none !important;
+	box-shadow: none;
+ }
+ .normalbtn:hover{
+	color: #fff;
+	background-color: #000;
+ }
