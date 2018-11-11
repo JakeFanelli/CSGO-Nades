@@ -22,6 +22,7 @@ var molotovClicked = false;
 $(document).ready(function(){
 $("#smokeButton").hover(function(){
 	if(smokeClicked===false){
+		console.log("aye what up");
 		$(this).css("background-color", "#000");
 		$(this).css("color", "#fff");
 	}else{
