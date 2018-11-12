@@ -15,11 +15,10 @@ function genModal(title, video){
 	video.setAttribute("src",body);
 	video.load();
 }
-
+$(document).ready(function(){
 var smokeClicked = false;
 var flashClicked = false;
 var molotovClicked = false;
-$(document).ready(function(){
 $("#smokeButton").hover(function(){
 	if(smokeClicked===false){
 		console.log("aye what up");
@@ -71,7 +70,6 @@ $("#molotovButton").hover(function(){
 		$(this).css("background-color", "#000");
 		$(this).css("color", "#fff");
 	}
-});
 });
 
 function smokeClick(){
@@ -158,3 +156,4 @@ function molotovClick(){
 		}
 	}
 }
+});
