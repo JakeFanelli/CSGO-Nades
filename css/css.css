@@ -103,6 +103,9 @@ a.thumbnail:hover {
 	background-color: #222 !important;
 	cursor: default;
 }
+#filter:focus{
+	color: #9d9d9d;
+}
 #donate{
 	border:none;
 	box-shadow: none;
