@@ -124,7 +124,7 @@ a.thumbnail:hover {
 	background-color: #222;
 	color: #9d9d9d;
 }
-.btn:focus,.btn:active, .btn.focus {
+.btn:focus, .btn:active, .btn.focus, a:focus {
 	outline: none !important;
 	box-shadow: none;
 	color:#9d9d9d;
