@@ -124,11 +124,28 @@ a.thumbnail:hover {
 	background-color: #222;
 	color: #9d9d9d;
 }
-.btn:focus,.btn:active {
+.btn:focus,.btn:active, .btn.focus {
 	outline: none !important;
 	box-shadow: none;
- }
- .normalbtn:hover{
+	color:#9d9d9d;
+}
+.btn.active{
 	color: #fff;
 	background-color: #000;
- }
+}
+.btn.active.focus{
+	outline: none !important;
+	box-shadow: none;
+}
+.normalbtn:hover{
+	color: #fff;
+	background-color: #000;
+}
+.selectedCheck{
+	color: #fff !important;
+	background-color: #000 !important;
+}
+.unselectedCheck{
+	color: #9d9d9d !important;
+	background-color: #222 !important;
+}
