@@ -15,29 +15,32 @@
 	<link rel="stylesheet" href="../../css/bootstrap-theme.css">
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/css.css">
-	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/js.js"></script>
 <title>CS:GO Nades</title>
 </head>
 <body>
 	<div id="nav-bar">
-		<script>
-			navBar();
-		</script>
 	</div>
 		<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
-		<script>
-			modal();
-		</script>
 	</div>
 
 	<div class="container">
 		<div id="filterRow" class="row">
-			<script>
-				filterBar();
-			</script>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn-group btn-group-toggle" data-toggle="buttons">
+					<button id="filter" class="btn filterItem">Filter:</button>
+				
+					<label id="smokeButton" class="btn filterItem choice">
+						<input type="checkbox" name="smokebox" autocomplete="off"> Smokes
+					</label>
+				
+					<label id="flashButton" class="btn filterItem choice">
+						<input type="checkbox" name="flashbox" autocomplete="off"> Flashes
+					</label>
+				
+					<label id="molotovButton" class="btn filterItem choice">
+						<input type="checkbox" name="molotovbox" autocomplete="off"> Molotovs
+					</label>
+				</div>
 		</div>
 	    <div class="row">
 	        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -173,5 +176,107 @@
 	        </div>
 	    </div>
 	</div>
+	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script>
+		$( document ).ready(function() {
+			navBar();
+			modal();
+			var smoke = document.getElementById("smokeButton");
+			var flash = document.getElementById("flashButton");
+			var molotov = document.getElementById("molotovButton");
+			$(smoke).mouseover(function(){
+				if(smokeClicked==false){
+					smoke.classList.add("selectedCheck");
+					smoke.classList.remove("unselectedCheck");
+				}else{
+					smoke.classList.remove("selectedCheck");
+					smoke.classList.add("unselectedCheck");
+				}
+			});
+			$(smoke).mouseout(function(){
+				if(smokeClicked==false){
+					smoke.classList.remove("selectedCheck");
+					smoke.classList.add("unselectedCheck");
+				}else{
+					smoke.classList.add("selectedCheck");
+					smoke.classList.remove("unselectedCheck");
+				}
+			});
+			$(flash).mouseover(function(){
+				if(flashClicked==false){
+					flash.classList.add("selectedCheck");
+					flash.classList.remove("unselectedCheck");
+				}else{
+					flash.classList.remove("selectedCheck");
+					flash.classList.add("unselectedCheck");
+				}
+			});
+			$(flash).mouseout(function(){
+				if(flashClicked==false){
+					flash.classList.remove("selectedCheck");
+					flash.classList.add("unselectedCheck");
+				}else{
+					flash.classList.add("selectedCheck");
+					flash.classList.remove("unselectedCheck");
+				}
+			});
+			$(molotov).mouseover(function(){
+				if(molotovClicked==false){
+					molotov.classList.add("selectedCheck");
+					molotov.classList.remove("unselectedCheck");
+				}else{
+					molotov.classList.remove("selectedCheck");
+					molotov.classList.add("unselectedCheck");
+				}
+			});
+			$(molotov).mouseout(function(){
+				if(molotovClicked==false){
+					molotov.classList.remove("selectedCheck");
+					molotov.classList.add("unselectedCheck");
+				}else{
+					molotov.classList.add("selectedCheck");
+					molotov.classList.remove("unselectedCheck");
+				}
+			});
+			$(smoke).click(function() {
+				smokeClick();
+				$('input[name=smokebox]').change(function(){
+				if($(this).is(':checked')) {
+					smoke.classList.add("selectedCheck");
+					smoke.classList.remove("unselectedCheck");
+				} else {
+					smoke.classList.remove("selectedCheck");
+					smoke.classList.add("unselectedCheck");
+				}
+				});
+			});
+			$('#flashButton').click(function() {
+				flashClick();
+				$('input[name=flashbox]').change(function(){
+				if($(this).is(':checked')) {
+					flash.classList.add("selectedCheck");
+					flash.classList.remove("unselectedCheck");
+				} else {
+					flash.classList.remove("selectedCheck");
+					flash.classList.add("unselectedCheck");
+				}
+				});
+			});
+			$('#molotovButton').click(function() {
+				molotovClick();
+				$('input[name=molotovbox]').change(function(){
+				if($(this).is(':checked')) {
+					molotov.classList.add("selectedCheck");
+					molotov.classList.remove("unselectedCheck");
+				} else {
+					molotov.classList.remove("selectedCheck");
+					molotov.classList.add("unselectedCheck");
+				}
+				});
+			});
+		});
+	</script>
 </body>
 </html>

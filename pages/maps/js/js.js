@@ -1,12 +1,14 @@
+var smokeClicked = false;
+var flashClicked = false;
+var molotovClicked = false;
+
 function navBar(){
-  	$("#nav-bar").load("navbar.html");
-}
-function filterBar(){
-	$("#filterRow").load("filterbar.html");
+	$("#nav-bar").load("navbar.html");
 }
 function modal(){
 	$("#myModal").load("modal.html");
 }
+
 function genModal(title, video){
 	var title = title;
 	var body = video;
@@ -15,9 +17,6 @@ function genModal(title, video){
 	video.setAttribute("src",body);
 	video.load();
 }
-var smokeClicked = false;
-var flashClicked = false;
-var molotovClicked = false;
 
 function smokeClick(){
 	var smoke = document.getElementById('smokeButton');
@@ -43,6 +42,7 @@ function smokeClick(){
 		}
 	}
 }
+
 function flashClick(){
 	var smoke = document.getElementById('smokeButton');
 	var flash = document.getElementById('flashButton');
@@ -67,6 +67,7 @@ function flashClick(){
 		}
 	}
 }
+
 function molotovClick(){
 	var smoke = document.getElementById('smokeButton');
 	var flash = document.getElementById('flashButton');
@@ -91,98 +92,3 @@ function molotovClick(){
 		}
 	}
 }
-$(document).ready(function() {
-	var smoke = document.getElementById('smokeButton');
-	var flash = document.getElementById('flashButton');
-	var molotov = document.getElementById('molotovButton');
-	$('#smokeButton').click(function() {
-		smokeClick();
-	});
-	$('#flashButton').click(function() {
-		flashClick();
-	});
-	$('#molotovButton').click(function() {
-		molotovClick();
-	});
-	$("#smokeButton").mouseover(function(){
-		if(smokeClicked==false){
-			smoke.classList.add("selectedCheck");
-			smoke.classList.remove("unselectedCheck");
-		}else{
-			smoke.classList.remove("selectedCheck");
-			smoke.classList.add("unselectedCheck");
-		}
-	});
-	$("#smokeButton").mouseout(function(){
-		if(smokeClicked==false){
-			smoke.classList.remove("selectedCheck");
-			smoke.classList.add("unselectedCheck");
-		}else{
-			smoke.classList.add("selectedCheck");
-			smoke.classList.remove("unselectedCheck");
-		}
-	});
-	$("#flashButton").mouseover(function(){
-		if(flashClicked==false){
-			flash.classList.add("selectedCheck");
-			flash.classList.remove("unselectedCheck");
-		}else{
-			flash.classList.remove("selectedCheck");
-			flash.classList.add("unselectedCheck");
-		}
-	});
-	$("#flashButton").mouseout(function(){
-		if(flashClicked==false){
-			flash.classList.remove("selectedCheck");
-			flash.classList.add("unselectedCheck");
-		}else{
-			flash.classList.add("selectedCheck");
-			flash.classList.remove("unselectedCheck");
-		}
-	});
-	$("#molotovButton").mouseover(function(){
-		if(molotovClicked==false){
-			molotov.classList.add("selectedCheck");
-			molotov.classList.remove("unselectedCheck");
-		}else{
-			molotov.classList.remove("selectedCheck");
-			molotov.classList.add("unselectedCheck");
-		}
-	});
-	$("#molotovButton").mouseout(function(){
-		if(molotovClicked==false){
-			molotov.classList.remove("selectedCheck");
-			molotov.classList.add("unselectedCheck");
-		}else{
-			molotov.classList.add("selectedCheck");
-			molotov.classList.remove("unselectedCheck");
-		}
-	});
-	$('input[name=smokebox]').change(function(){
-		if($(this).is(':checked')) {
-			smoke.classList.add("selectedCheck");
-			smoke.classList.remove("unselectedCheck");
-		} else {
-			smoke.classList.remove("selectedCheck");
-			smoke.classList.add("unselectedCheck");
-		}
-	});
-	$('input[name=flashbox]').change(function(){
-		if($(this).is(':checked')) {
-			flash.classList.add("selectedCheck");
-			flash.classList.remove("unselectedCheck");
-		} else {
-			flash.classList.remove("selectedCheck");
-			flash.classList.add("unselectedCheck");
-		}
-	});
-	$('input[name=molotovbox]').change(function(){
-		if($(this).is(':checked')) {
-			molotov.classList.add("selectedCheck");
-			molotov.classList.remove("unselectedCheck");
-		} else {
-			molotov.classList.remove("selectedCheck");
-			molotov.classList.add("unselectedCheck");
-		}
-	});
-})
