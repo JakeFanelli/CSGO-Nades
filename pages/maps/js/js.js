@@ -1,6 +1,8 @@
 var smokeClicked = false;
 var flashClicked = false;
 var molotovClicked = false;
+var tButtonClicked = true;
+var ctButtonClicked = false;
 
 function navBar(){
 	$("#nav-bar").load("navbar.html");
@@ -22,23 +24,31 @@ function smokeClick(){
 	var smoke = document.getElementById('smokeButton');
 	var flash = document.getElementById('flashButton');
 	var molotov = document.getElementById('molotovButton');
-	if(smokeClicked===false){//if not clicked already
+	if(smokeClicked==false){//if not clicked already
 		smokeClicked=true;
-		$('.smokes').show();
+		showAllSmokes();
 		if(flashClicked == false){
-			$('.flashes').hide();
+			hideAllFlashes();
 		}
 		if(molotovClicked == false){
-			$('.molotovs').hide();
+			hideAllMollys();
+		}
+		if(tButtonClicked==true){
+			$('.ctsmoke').hide();
+		}else{
+			$('.tsmoke').hide();
 		}
 	}else{//if clicked already
 		smokeClicked=false;
 		if(flashClicked==false&&molotovClicked==false){
-			$('.smokes').show();
-			$('.flashes').show();
-			$('.molotovs').show();
+			showAllNades();
+			if(tButtonClicked==true){
+				hideCTNades();
+			}else{
+				hideTNades();
+			}
 		}else{
-			$('.smokes').hide();
+			hideAllSmokes();
 		}
 	}
 }
@@ -47,23 +57,31 @@ function flashClick(){
 	var smoke = document.getElementById('smokeButton');
 	var flash = document.getElementById('flashButton');
 	var molotov = document.getElementById('molotovButton');
-	if(flashClicked===false){//if not clicked already
+	if(flashClicked==false){//if not clicked already
 		flashClicked=true;
-		$('.flashes').show();
+		showAllFlashes();
 		if(smokeClicked == false){
-			$('.smokes').hide();
+			hideAllSmokes();
 		}
 		if(molotovClicked == false){
-			$('.molotovs').hide();
+			hideAllMollys();
+		}
+		if(tButtonClicked==true){
+			$('.ctflash').hide();
+		}else{
+			$('.tflash').hide();
 		}
 	}else{//if clicked already
 		flashClicked=false;
 		if(smokeClicked==false&&molotovClicked==false){
-			$('.smokes').show();
-			$('.flashes').show();
-			$('.molotovs').show();
+			showAllNades();
+			if(tButtonClicked==true){
+				hideCTNades();
+			}else{
+				hideTNades();
+			}
 		}else{
-			$('.flashes').hide();
+			hideAllFlashes();
 		}
 	}
 }
@@ -72,23 +90,126 @@ function molotovClick(){
 	var smoke = document.getElementById('smokeButton');
 	var flash = document.getElementById('flashButton');
 	var molotov = document.getElementById('molotovButton');
-	if(molotovClicked===false){//if not clicked already
+	if(molotovClicked==false){//if not clicked already
 		molotovClicked=true;
-		$('.molotovs').show();
-		if(smokeClicked == false){
-			$('.smokes').hide();
-		}
+		showAllMollys();
 		if(flashClicked == false){
-			$('.flashes').hide();
+			hideAllFlashes();
+		}
+		if(smokeClicked == false){
+			hideAllSmokes();
+		}
+		if(tButtonClicked==true){
+			$('.ctmolly').hide();
+		}else{
+			$('.tmolly').hide();
 		}
 	}else{//if clicked already
 		molotovClicked=false;
 		if(flashClicked==false&&smokeClicked==false){
-			$('.smokes').show();
-			$('.flashes').show();
-			$('.molotovs').show();
+			showAllNades();
+			if(tButtonClicked==true){
+				hideCTNades();
+			}else{
+				hideTNades();
+			}
+		}else{
+			hideAllMollys();
+		}
+	}
+}
+
+function tClick(){
+	ctButtonClicked=false;
+	tButtonClicked=true;
+	$('.t').show();
+	$('.ct').hide();
+	if(smokeClicked==false&&flashClicked==false&&molotovClicked==false){
+		$('.t').show();
+		$('.ct').hide();
+	}else{ 
+		if(smokeClicked==true){
+			$('.ctsmoke').hide();
+			$('.tsmoke').show();
+		}else{
+			$('.smokes').hide();
+		}
+		if(flashClicked==true){
+			$('.ctflash').hide();
+			$('.tflash').show();
+		}else{
+			$('.flashes').hide();
+		}
+		if(molotovClicked==true){
+			$('.ctmolly').hide();
+			$('.tmolly').show();
 		}else{
 			$('.molotovs').hide();
 		}
 	}
+}
+function ctClick(){
+	tButtonClicked=false;
+	ctButtonClicked=true;
+	if(smokeClicked==false&&flashClicked==false&&molotovClicked==false){
+		$('.ct').show();
+		$('.t').hide();
+	}else{ 
+		if(smokeClicked==true){
+			$('.tsmoke').hide();
+			$('.ctsmoke').show();
+		}else{
+			$('.smokes').hide();
+		}
+		if(flashClicked==true){
+			$('.tflash').hide();
+			$('.ctflash').show();
+		}else{
+			$('.flashes').hide();
+		}
+		if(molotovClicked==true){
+			$('.tmolly').hide();
+			$('.ctmolly').show();
+		}else{
+			$('.molotovs').hide();
+		}
+	}
+}
+function loaded(){
+	tButtonClicked=true;
+	ctButtonClicked=false;
+	$('.ct').hide();
+}
+function showAllMollys(){
+	$('.molotovs').show();
+}
+function showAllSmokes(){
+	$('.smokes').show();
+}
+function showAllFlashes(){
+	$('.flashes').show();
+}
+function hideAllMollys(){
+	$('.molotovs').hide();
+}
+function hideAllSmokes(){
+	$('.smokes').hide();
+}
+function hideAllFlashes(){
+	$('.flashes').hide();
+}
+function hideTNades(){
+	$('.tsmoke').hide();
+	$('.tflash').hide();
+	$('.tmolly').hide();
+}
+function hideCTNades(){
+	$('.ctsmoke').hide();
+	$('.ctflash').hide();
+	$('.ctmolly').hide();
+}
+function showAllNades(){
+	$('.smokes').show();
+	$('.flashes').show();
+	$('.molotovs').show();
 }

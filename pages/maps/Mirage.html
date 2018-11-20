@@ -26,19 +26,25 @@
 
 	<div class="container">
 		<div id="filterRow" class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn-group btn-group-toggle" data-toggle="buttons">
-				<button id="filter" class="btn filterItem">Filter:</button>
-			
-				<label id="smokeButton" class="btn filterItem choice">
-					<input type="checkbox" name="smokebox" autocomplete="off"> Smokes
-				</label>
-			
-				<label id="flashButton" class="btn filterItem choice">
-					<input type="checkbox" name="flashbox" autocomplete="off"> Flashes
-				</label>
-			
-				<label id="molotovButton" class="btn filterItem choice">
-					<input type="checkbox" name="molotovbox" autocomplete="off"> Molotovs
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label id="smokeButton" class="btn filterItem choice">
+						<input type="checkbox" name="smokebox" autocomplete="off"> Smokes
+					</label>
+					<label id="flashButton" class="btn filterItem choice">
+						<input type="checkbox" name="flashbox" autocomplete="off"> Flashes
+					</label>
+					<label id="molotovButton" class="btn filterItem choice">
+						<input type="checkbox" name="molotovbox" autocomplete="off"> Molotovs
+					</label>
+				</div>
+				<!-- Rectangular switch -->
+				<label id="switch" class="switch">
+					<input type="checkbox" name="sideSwitch">
+					<span class="slider">
+						<span id="T">T</span>
+						<span id="CT" class="invisible">CT</span>
+					</span>
 				</label>
 			</div>
 		</div>
@@ -47,7 +53,7 @@
 	        	<img class = "img-responsive overlay" src="../../media/mirageMap.png"></img>
 	        	<svg class="svgClass" viewBox="0 0 150 120" height="100%" width="100%">
 	        		<a href="" onclick="genModal('Window Smoke from T Spawn','https://giant.gfycat.com/LimitedDecisiveBluebottlejellyfish.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="134" x2="62" y1="66" y2="55"></line>
 
 		        			<circle cx="134" cy="66" r="1"></circle>
@@ -59,7 +65,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('Stairs Smoke from T Spawn','https://giant.gfycat.com/VillainousViciousDeviltasmanian.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="129" x2="80" y1="68" y2="77"></line>
 
 		        			<circle cx="129" cy="68" r="1"></circle>
@@ -71,7 +77,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('Jungle Smoke from T Spawn','https://giant.gfycat.com/FlickeringRemarkableEstuarinecrocodile.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="118" x2="76" y1="74" y2="77"></line>
 
 		        			<circle cx="118" cy="74" r="1"></circle>
@@ -83,7 +89,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('CT Smoke from T Spawn','https://giant.gfycat.com/EnragedZanyBlackfootedferret.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="121" x2="71" y1="65" y2="95"></line>
 
 		        			<circle cx="121" cy="65" r="1"></circle>
@@ -95,7 +101,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('Top Mid Smoke from T Spawn','https://giant.gfycat.com/FlamboyantIllfatedKitten.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="136" x2="90" y1="38" y2="50"></line>
 
 		        			<circle cx="136" cy="38" r="1"></circle>
@@ -107,7 +113,7 @@
 		        		</g>
 		        	</a>
 		        	<a href="" onclick="genModal('GetRight Smoke from B apts','https://giant.gfycat.com/ShyClumsyJackrabbit.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="80" x2="50" y1="24" y2="30"></line>
 
 		        			<circle cx="80" cy="24" r="1"></circle>
@@ -119,7 +125,7 @@
 		        		</g>
 		        	</a>
 		        	<a href="" onclick="genModal('Cat Arch Smoke from B apts','https://giant.gfycat.com/FatHonestAsiandamselfly.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="71" x2="50" y1="26" y2="36"></line>
 
 		        			<circle cx="71" cy="26" r="1"></circle>
@@ -131,7 +137,7 @@
 		        		</g>
 		        	</a>
 		        	<a href="" onclick="genModal('Market Window Smoke from B apts','https://giant.gfycat.com/FabulousHonestAgouti.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="89" x2="38" y1="20" y2="47"></line>
 
 		        			<circle cx="89" cy="20" r="1"></circle>
@@ -143,7 +149,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('Cat Smoke from B apts','https://giant.gfycat.com/MetallicParallelHuman.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="89" x2="58" y1="20" y2="36"></line>
 
 		        			<circle cx="89" cy="20" r="1"></circle>
@@ -155,7 +161,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('Window Smoke from Top Mid','https://giant.gfycat.com/GeneralBlindEchidna.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="106" x2="62" y1="56" y2="55"></line>
 
 		        			<circle cx="106" cy="56" r="1"></circle>
@@ -167,7 +173,7 @@
 		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('Top Cat Smoke from T Spawn','https://giant.gfycat.com/RemorsefulFlawlessCats.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="136" x2="71" y1="40" y2="45"></line>
 
 		        			<circle cx="136" cy="40" r="1"></circle>
@@ -179,7 +185,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Market Door Smoke from T spawn','https://giant.gfycat.com/ExaltedImaginaryGiantschnauzer.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="134" x2="26" y1="29" y2="46"></line>
 
 		        			<circle cx="134" cy="29" r="1"></circle>
@@ -191,7 +197,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('B Apts Balcony Smoke from T spawn','https://giant.gfycat.com/MadInfamousCockatiel.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="136" x2="36" y1="45" y2="23"></line>
 
 		        			<circle cx="136" cy="45" r="1"></circle>
@@ -203,7 +209,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('GetRight Smoke from T spawn of B apts','https://giant.gfycat.com/SpanishJampackedInexpectatumpleco.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="109" x2="50" y1="27" y2="30"></line>
 
 		        			<circle cx="109" cy="27" r="1"></circle>
@@ -215,7 +221,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Cat Arch Smoke from T spawn of B apts','https://giant.gfycat.com/JitteryEvergreenHerring.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="109" x2="50" y1="25" y2="36"></line>
 
 		        			<circle cx="109" cy="25" r="1"></circle>
@@ -227,7 +233,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Deep Jungle Smoke from outside B apts','https://giant.gfycat.com/SoupyInformalHeterodontosaurus.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="107" x2="68" y1="32" y2="75"></line>
 
 		        			<circle cx="107" cy="32" r="1"></circle>
@@ -239,7 +245,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Top Connector Smoke from outside B apts','https://giant.gfycat.com/BlaringDeliciousHydra.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 							<line x1="108" x2="75" y1="31" y2="72"></line>
 
 							<circle cx="108" cy="31" r="1"></circle>
@@ -251,7 +257,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Jungle Smoke from Underpass','https://giant.gfycat.com/InnocentBriefInchworm.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="67" x2="74" y1="50" y2="77"></line>
 
 							<circle cx="67" cy="50" r="1"></circle>
@@ -263,7 +269,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Connector Smoke from T spawn','https://giant.gfycat.com/TatteredAthleticIbisbill.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="127" x2="75" y1="25" y2="63"></line>
 
 		        			<circle cx="127" cy="25" r="1"></circle>
@@ -275,7 +281,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Triple Smoke from T Spawn','https://giant.gfycat.com/DarlingWelllitAmurminnow.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="135" x2="73" y1="63" y2="90"></line>
 
 		        			<circle cx="135" cy="63" r="1"></circle>
@@ -287,7 +293,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Mid A Site Smoke from T Spawn','https://giant.gfycat.com/NeatPointlessAsiaticmouflon.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="smokes">
+		        		<g class="smokes t tsmoke">
 		        			<line x1="120" x2="82" y1="71" y2="90"></line>
 
 		        			<circle cx="120" cy="71" r="1"></circle>
@@ -297,9 +303,33 @@
 		        			<circle cx="82" cy="89" r="1.5"></circle>
 		        			<circle cx="82" cy="91" r="1.5"></circle>
 		        		</g>
+					</a>
+					<a href="" onclick="genModal('A Ramp Smoke from CT Spawn','https://giant.gfycat.com/FancyBetterGoshawk.mp4')" data-toggle="modal" data-target="#myModal">
+		        		<g class="smokes ct ctsmoke">
+		        			<line x1="35" x2="102" y1="87" y2="76"></line>
+
+		        			<circle cx="35" cy="87" r="1"></circle>
+
+		        			<circle cx="103" cy="76" r="1.5"></circle>
+		        			<circle cx="101" cy="76" r="1.5"></circle>
+		        			<circle cx="102" cy="75" r="1.5"></circle>
+		        			<circle cx="102" cy="77" r="1.5"></circle>
+		        		</g>
+					</a>
+					<a href="" onclick="genModal('Deep B apts Smoke from CT Spawn','https://giant.gfycat.com/ShallowPleasantIcterinewarbler.mp4')" data-toggle="modal" data-target="#myModal">
+		        		<g class="smokes ct ctsmoke">
+		        			<line x1="45" x2="70" y1="70" y2="27"></line>
+
+		        			<circle cx="45" cy="70" r="1"></circle>
+
+		        			<circle cx="71" cy="27" r="1.5"></circle>
+		        			<circle cx="69" cy="27" r="1.5"></circle>
+		        			<circle cx="70" cy="26" r="1.5"></circle>
+		        			<circle cx="70" cy="28" r="1.5"></circle>
+		        		</g>
 	        		</a>
 	        		<a href="" onclick="genModal('B Apts pop flash','https://giant.gfycat.com/PolishedOrnateBluemorphobutterfly.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="flashes">
+		        		<g class="flashes t tflash">
 		        			<line x1="65" x2="53" y1="28" y2="21"></line>
 
 		        			<circle cx="65" cy="28" r="1"></circle>
@@ -311,7 +341,7 @@
 		        		</g>
 					</a>
 					<a href="" onclick="genModal('Connector pop flash from Top Mid','https://giant.gfycat.com/BoilingRapidBubblefish.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="flashes">
+		        		<g class="flashes t tflash">
 		        			<line x1="106" x2="76" y1="56" y2="60"></line>
 
 		        			<circle cx="106" cy="56" r="1"></circle>
@@ -319,8 +349,17 @@
 							<image xlink:href="../../media/flash.png" x="72" y="56.5" width="7px" height="7px">
 		        		</g>
 					</a>
+					<a href="" onclick="genModal('Window pop flash from Window','https://giant.gfycat.com/TartTerribleImago.mp4')" data-toggle="modal" data-target="#myModal">
+		        		<g class="flashes ct ctflash">
+		        			<line x1="59" x2="63" y1="62" y2="55"></line>
+
+		        			<circle cx="59" cy="62" r="1"></circle>
+
+							<image xlink:href="../../media/flash.png" x="60" y="51" width="7px" height="7px">
+		        		</g>
+					</a>
 					<a href="" onclick="genModal('Molotov under balcony','https://giant.gfycat.com/DirectRigidAcouchi.mp4')" data-toggle="modal" data-target="#myModal">
-		        		<g class="molotovs">
+		        		<g class="molotovs t tmolly">
 		        			<line x1="95" x2="97" y1="96" y2="88"></line>
 
 		        			<circle cx="95" cy="96" r="1"></circle>
@@ -338,9 +377,12 @@
 		$( document ).ready(function() {
 			navBar();
 			modal();
+			loaded();
 			var smoke = document.getElementById("smokeButton");
 			var flash = document.getElementById("flashButton");
 			var molotov = document.getElementById("molotovButton");
+			var t = document.getElementById("T");
+			var ct = document.getElementById("CT");
 			$(smoke).mouseover(function(){
 				if(smokeClicked==false){
 					smoke.classList.add("selectedCheck");
@@ -428,6 +470,23 @@
 				} else {
 					molotov.classList.remove("selectedCheck");
 					molotov.classList.add("unselectedCheck");
+				}
+				});
+			});
+			$('#switch').click(function() {
+				$('input[name=sideSwitch]').change(function(){
+				if($(this).is(':checked')) {
+					ctClick();
+					t.classList.add("invisible");
+					t.classList.remove("visible");
+					ct.classList.add("visible");
+					ct.classList.remove("invisible");
+				} else {
+					tClick();
+					ct.classList.remove("visible");
+					ct.classList.add("invisible");
+					t.classList.add("visible");
+					t.classList.remove("invisible");
 				}
 				});
 			});
