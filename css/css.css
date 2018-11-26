@@ -1,16 +1,7 @@
-html{
-	height:100%;
-}
 body {
  	height: 100%;
  	background-color: #333;
  	color: #fff;
-}
-#mapRow{
-	height:100%;
-}
-#mapCol{
-	height:100%;
 }
 .thumbnail{
 	padding:unset;
@@ -247,12 +238,3 @@ a.thumbnail:hover {
 	  position: absolute;
 	  top: 0 !important;
   }
-  @media only screen and (max-width: 425px) {
-    #contentContainer{
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	#filterCol, #mapCol, #imgBox{
-		padding-right:0px;
-	}
-}
