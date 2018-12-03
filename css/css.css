@@ -1,7 +1,16 @@
+html{
+	height:100%;
+}
 body {
  	height: 100%;
  	background-color: #333;
  	color: #fff;
+}
+#mapRow{
+	height:100%;
+}
+#mapCol{
+	height:100%;
 }
 .thumbnail{
 	padding:unset;
@@ -235,6 +244,12 @@ a.thumbnail:hover {
 	transform: translateX(26px);
   }
   video::-webkit-media-controls-overlay-play-button{
-	  position: absolute;
-	  top: 0 !important;
+	position: absolute;
+	top: 0 !important;
   }
+  @media only screen and (max-width: 425px) {
+	#filterCol, #mapCol, #imgBox{
+		padding-right:0px;
+		padding-left:0px;
+	}
+}

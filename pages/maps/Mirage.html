@@ -24,9 +24,9 @@
 	<div id="myModal" class="modal fade" role="dialog">
 	</div>
 
-	<div class="container">
+	<div id="contentContainer" class="container">
 		<div id="filterRow" class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div id="filterCol" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label id="smokeButton" class="btn filterItem choice">
 						<input type="checkbox" name="smokebox" autocomplete="off"> Smokes
@@ -48,10 +48,10 @@
 				</label>
 			</div>
 		</div>
-	    <div class="row">
-	        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	        	<img class = "img-responsive overlay" src="../../media/mirageMap.png"></img>
-	        	<svg class="svgClass" viewBox="0 0 150 120" height="100%" width="100%">
+	    <div id="mapRow" class="row">
+	        <div id="mapCol" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	        	<img id="imgBox" class="img-responsive overlay" src="../../media/mirageMap.png"></img>
+	        	<svg class="svgClass" viewBox="0 0 150 120" height="100%" width="100%" preserveAspectRatio="none">
 	        		<a href="" onclick="genModal('Window Smoke from T Spawn','https://giant.gfycat.com/LimitedDecisiveBluebottlejellyfish.mp4')" data-toggle="modal" data-target="#myModal">
 		        		<g class="smokes t tsmoke">
 		        			<line x1="134" x2="62" y1="66" y2="55"></line>
