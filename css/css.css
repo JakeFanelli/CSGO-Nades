@@ -252,4 +252,10 @@ a.thumbnail:hover {
 		padding-right:0px;
 		padding-left:0px;
 	}
+	#contentContainer{
+		height:100%;
+	}
+	#contentContainer{
+		height: calc(100% - 106px);
+	}
 }
