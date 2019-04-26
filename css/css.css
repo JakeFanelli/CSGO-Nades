@@ -274,3 +274,13 @@ video::-webkit-media-controls-overlay-play-button {
   border-radius: 2%;
   margin-bottom: 20px;
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #contentContainer {
+    height: calc(100% - 106px);
+  }
+}
+@supports (-ms-accelerator: true) {
+  #contentContainer {
+    height: calc(100% - 106px);
+  }
+}
