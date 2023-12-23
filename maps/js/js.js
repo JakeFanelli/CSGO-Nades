@@ -17,7 +17,6 @@ function genModal(title, video){
 	var video = document.getElementById('videoTag');
 	$('.modal-title').html(title);
 	video.setAttribute("src",body);
-	video.load();
 }
 
 function smokeClick(){
