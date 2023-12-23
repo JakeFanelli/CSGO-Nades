@@ -115,15 +115,6 @@ a.thumbnail:hover {
 #filter:focus {
   color: #9d9d9d;
 }
-#donate {
-  border: none;
-  box-shadow: none;
-}
-#donate:active,
-#donate:focus {
-  background-color: #000;
-  color: #fff;
-}
 .filterItem {
   font-size: 15px;
 }
